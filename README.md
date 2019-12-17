@@ -1,5 +1,7 @@
 # feynman-notes
 
+I WILL ADD THIS LATER ON ...
+
 notes taken with the feynman technique
 
 ## Table of Contents
