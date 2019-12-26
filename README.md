@@ -3,6 +3,7 @@ I keep my notes that are taken with the feynman technique in this repository. If
 - Github: [@demirantay](https://github.com/demirantay)
 - Email: demir99antay@gmail.com
 - Linkedin: [demir-antay](https://tr.linkedin.com/in/demir-antay-97a140165)
+- Angelist: ... (i need to add this)
 
 ## Computer Science
 
