@@ -1,5 +1,3 @@
-> Edit this page later on once I really start taking feymna notes. Take a look at other digitial notebooks of other people get inspiration. This looks like shit
-
 I keep my notes that are taken with the feynman technique in this repository. If you want to see all of my notes you can visit my [digital notebook here](https://github.com/demirantay/notebook). You can contact me through here:
 
 - Github: [@demirantay](https://github.com/demirantay)
@@ -9,11 +7,6 @@ I keep my notes that are taken with the feynman technique in this repository. If
 
 ## Computer Science
 
-- [Web Intro]()
-- [Web Frontend]()
-- [Web Backend](./foo.md)
-- [Web DevOps]()
-
-## Finance
-
-- ...
+- DevOps
+  - [Nginx](devops/nginx/README.md)
+  - [CGI's](devops/cgi/README.md)
