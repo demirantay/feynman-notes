@@ -7,20 +7,23 @@ I keep my notes that are taken with the feynman technique in this repository. If
 
 ## Computer Science
 
-- DevOps:
+#### DevOps:
   - [Nginx](devops/nginx/README.md)
   - [CGI's](devops/cgi/README.md)
+
   
-- Backend:
+#### Backend:
   - [Python](backend/python/README.md)
   - [Standarts and Best Practices](backend/standarts-and-best-practices/README.md)
   - ...
   
-- Frontend:
+  
+#### Frontend:
   - [HTML](frontend/html/README.md)
   - ...
   
-- Theory:
+  
+#### Theory:
   - [Programming]()
   - [Algorithms and Data Structures]()
   - ...
