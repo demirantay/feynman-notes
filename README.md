@@ -17,5 +17,5 @@
 #### Algorithms:
   - ...
 
-### Operating Systems:
+#### Operating Systems:
   - ...
