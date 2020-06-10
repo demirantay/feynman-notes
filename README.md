@@ -1,5 +1,8 @@
-I keep my notes that are taken with the feynman technique in this repository. If you want to see all of my notes you can visit my [digital notebook here](https://github.com/demirantay/notebook). You can contact me through here:
-
+> Feynman Technique:
+> - Choose a concept you want to learn about.
+> - Pretend you are teaching it to a student in grade 6.
+> - Identify gaps in your explanation; Go back to the source material, to better understand it.
+> - Review and simplify (optional)
 
 #### Frontend:
   - ...
