@@ -260,6 +260,30 @@ print(type(x))  # outputs <class 'int'>
 
 ### Text Type
 
+If you want to store data as a text inside your variables you should use strings. String literals in python (text data type) are surrounded by either single quotation marks or double quotation marks:
+```python
+text_1 = "Hello"
+text_2 = 'hello'
+```
+You can also use three double quotes for stroing strings when you assign them to a variable they are no longer considered comments by python language:
+```python
+a = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+```
+You can add two strings together and it is called concatenation:
+```python
+text_1 = "Hello "
+text_2 = "world!"
+
+a = text_1 + text_2
+
+print(a)  # Hello world!
+```
+There are much more that you can do with strings that comes from the standart library such as `capitialize()` (converts the first character to upper case .. etc.
+It would take too much time to write down every standart library method. Just [view them here](https://www.w3schools.com/python/python_strings.asp)
+
 ### Numeric Types
 
 ### Sequence Types
@@ -272,20 +296,5 @@ print(type(x))  # outputs <class 'int'>
 
 ### Binary Types
 
-# Control Flow
+### Casting
 
-# Functions
-
-# Classes
-
-# Input/Output
-
-# Modules
-
-# Errors and Exceptions
-
-# Files
-
-# Additions
-
-# Little tour of Standart Libraries
