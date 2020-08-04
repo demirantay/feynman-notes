@@ -22,13 +22,13 @@ Table of Contents:
   - [Additions](#additions)
   - [Little tour of Standart Libraries](#little-tour-of-standart-libraries)
   
-## Introduction
+# Introduction
 
 So before we dive into the nitty-gritty details of what python is I wanted to say that not everything will be covered in this note file. As I said numeourus times above, this is just a feynman-styled-note-fite so it is meant to be kept short, neat and easy to understand by design. So if you are wondering the pythons lexers and parsers grammatical information (advanced topics, no need to worry) you are reading the wrong text. 
 
 I will explain just the idea behind the concepts such as functions, classes, module imports ... etc. You wont see the advanced usage of them. This text is meant for the logic behind all of the ideas above. So with that out of the way! Lets get started.
 
-## What is a Programming Language
+# What is a Programming Language
 
 `Python` is a "programming language", you may be wondering what is a "programming language" ? Well every person, animal ... etc. in this world communicates with each other through verbal expressions, signals and .. etc. the human-and-the-computer is no different. If we want to talk to computer we need a common ground where we can both understand each other, that is where programming languages comes into play .A programming language is essentially a software program that lets you speak to the computers hardware. Yes, the example I gave right now is **extremly** high-level and abstracted away from the details of what a programming language is ... However If I got into explaning what really is a programming language I would have to explain compilers too and I will do that in the `compilers` feynman-note.
 
@@ -38,7 +38,7 @@ However, programming languages are really different than your usual day-to-day s
 
 - `High-Level Programming Languages` -- Python is called a "high level" programming lanugage. You may be wondering what is that. High level basically means that the programming language is abstracted away from most of the concepts that is required to learn to write in lower level programming languages. For example without knowing how the computers work you cannot write good C code (a low level programming lanugage) yes you may code something nice and working but If you really want to use the language to its limits you need to understand how the computer works. But we do not have that problem with `python` since it is high level it is abstracted from most of the things regarding the underlying computer hardware. That does not mean that we do not need to know how computers work but essentially it makes our job easier. 
 
-## Difference between Interpreted vs. Compiled
+# Difference between Interpreted vs. Compiled
 
 So now that we learned what computer programs are, now we can learn the different types of programming languages. There are two major ones really `interpreted` and `compiled`. Compiled languages like Java, C/C++ does not immideatly run your program. First you compile your program and the compiler outputs a "machine-code" (the code readable by your computer) and you run that code. So the protocol for using a compiled language is:
   ```
@@ -50,13 +50,13 @@ So now that we learned what computer programs are, now we can learn the differen
   ```
   easy piesy right
 
-## Introduction to Python
+# Introduction to Python
 
 We now that we have learned what are programming languages are or what are the differences between a compiled and a interpreted languages are let's now learn about what exactly is `python`. I do not need to repeat that python is a interpreted programming language you already know that. What I will tell you is that why is python designed in the way it is designed. So esentially to quote the man (Guido van Rossum) who created python itself *"Computer Programming for Everybody", in which he further defined his goals for Python: An easy and intuitive language just as powerful as major competitors. Open source, so anyone can contribute to its development.* That quote and design mentality has been the corner stone for every update python received. 
 
 The language is kept extremly simple so that anybody can read or write in it without having to read hours of material. You can basically learn the basics of it over a weekend. And as it is mentioned above python is "open source" which means it is completly free and accepts contributions of work from everybody around the globe. 
 
-## Getting Started
+# Getting Started
 
 Before we dive into python's syntax rules and such ... we first need to install it into our computer. You can install it from [the official python.org](https://www.python.org/) or if you are familiar with the command line (terminal). You can install it with the following commands:
 ```
@@ -81,7 +81,7 @@ The command above in the terminal outputs the following:
 Hello, World!
 ```
 
-## Comments
+# Comments
 
 Before we get into how to write comments in python. Let's first understand what are comments and how are comments used inside a programming language. As it turns out writing code is not that hard but writing maintainable code that can be understood by many people ranging from different skillsets in the future is a very hard task. Believe it or not you usually won't even remember what code you wrote 2 days ago. That is why the founders of programming languages included a system called `comments`
 
@@ -100,10 +100,10 @@ by the interpreter :)
 '''
 ```
 
-## Variables
+# Variables
 
 Now that we know how to write comments and run our code inside a terminal it is time to start learning the actual snyntax rules and logic of programming languages to implement some powerful code. Let's start with `variables`. Before we show it how to write it in python, let's first explore the logic behind it. So basically variables are "bags that contain information" what that means is that you can store data inside a container which you can access later on in your code. Lets see a basic exmaple first:
-```
+```python
 # this is not python code it is psuedo-code
 
 variable foo = 1
@@ -150,24 +150,142 @@ or you can simply give all of the variables the same value:
 x = y = z = 15
 ```
 
-## Operators
+# Operators
 
-## Data Types
+Now that we know how to store some data inside variables, lets learn how we can do some operations on those data. We do not need to know most of the data types at the moment. We will just use numbers and string (text) data types for our variables. But most of the operations seen in this section can be used on all of the data types and after you learn the rest of the data types you can use the information here.
 
-## Control Flow
+First I will give out a simple python exmaple of what we can do with various operators. However it would take too long to give out exmaples of each operator. Instead after a basic explanation I will just give every operator inside a grouped table:
+```python
+# basic operator usage
 
-## Functions
+x = 10
+y = 2
 
-## Classes
+x + y   # 12
+x - y   # 8
+x ** y  # 100
+x / y   # 5
+```
+When you operate on variables the operator does not change the data of the variables to the newly created (calculated) value. If you want to store the newly created value you need to store it on a  new array such as this:
+```python
+x, y = 10, 5
+ 
+foo = x + y  # 15
+```
 
-## Input/Output
+Python divides the operators in the following groups:
+  - Arithmetic operators
+  - Assignment operators
+  - Comparison operators
+  - Logical operators
+  - Identity operators
+  - Membership operators
+  - Bitwise operators
+  
+  > Do not worry if the operators below do not make sense yet. It will once you move to control flows. Just skim thorugh it and use it as a reference point.
+  
+Arithemtic Operators
 
-## Modules
+| Operator | Name | Example |
+| --|--|--|
+| + | Addition | x + y |
+| - | Subtraction | x - y |
+| * | Multiplication | x * y |
+| / | Division | x / y |
+| % | Modulus | x % y |
+| ** | Exponentation | x ** y |
+| // | Floor Division | x // y |
 
-## Errors and Exceptions
+Assignment Operators:
+| Operator | Example | Same As |
+| -- | -- | --|
+| = | x = 5 | x = 5 |
+| += | x += 3 | x = x + 3 |
+| -= | x -= 3 | x = x - 3 |
+| * = | x *= 3 | x = x * 3 |
+| /= | x /= 3 |  x = x / 3 |
+| %= | x %= 3 | x = x % 3 |
+| //= | x //= 3 | x = x // 3 |
+| **= | x **= 3 | x = x ** 3 |
 
-## Files
+> skipped: &= , |= , ^= , >>= , <<=
 
-## Additions
+Comparison Operators:
+|Operator | Name | Example | 
+| --- | --- | --- |
+| == | Equal | x == y |
+| != | Not equal | x != y |
+| > | Greater than | x > y |
+| < | Less than | x < y |
+| >= | Greater than or equal to | x >= y |
+| <= | Less than or equal to | x <= y |
 
-## Little tour of Standart Libraries
+Logical Operators:
+| Operator | Description | Example | 
+| -- | -- | -- |
+| and | Returns True if both statements are true | x < 5 and x < 10 | 
+| or | Returns True if one of the statements is true | x < 5 or x < 4 |
+| not | 	Reverse the result, returns False if the result is true | not(x < 5 and x < 10) | 
+
+Identity Operators:
+| Operator | Description | Example | 
+| -- | -- | -- |
+| is | Returns True if both variables are the same object | x is y |
+| is not | Returns True if both variables are not the same object | x is not y |
+
+Membership Operators:
+| Operator | Description | Example | 
+| -- | -- | -- |
+| in | Returns True if a sequence with the specified value is present in the object | x in y |
+| not int | Returns True if a sequence with the specified value is not present in the object | x not in y |
+
+I am going to skip pythons Bitwise operators since it is not used on a day-to-day basis. It is usually used for special cases and if you are at that point why the hell are you reading this. 
+
+# Data Types
+
+Now lets understand what are the different data types we can assign to our variables. In the above chapters we have only used two data types `integers` (numbers) and `strings` (text inside ''). You have to understand that there are many more data types that called `primitive data types` of a language. Every language implements their own primitive data types and they differ from one language to another. Lets first see what kind of data types we can use and I will give specific examples and information for each one:
+  - Text Type: `str` 
+  - Numeric Types: `int`, `float`, `complex`
+  - Sequence Types: `list`, `tuple`, `range`
+  - Mapping Type: `dict`
+  - Set Types: `set`, `frozenset`
+  - Boolean Type: `bool`
+  - Binary Types: `bytes`, `bytearray`, `memoryview`
+  
+By the way in case you are unsure of a variables data type you can use this built in tool of python within your code:
+```python
+x = 5
+print(type(x))  # outputs <class 'int'>
+```
+
+### Text Type
+
+### Numeric Types
+
+### Sequence Types
+
+### Mapping Type
+
+### Set Types
+
+### Boolean Type
+
+### Binary Types
+
+# Control Flow
+
+# Functions
+
+# Classes
+
+# Input/Output
+
+# Modules
+
+# Errors and Exceptions
+
+# Files
+
+# Additions
+
+# Little tour of Standart Libraries
