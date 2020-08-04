@@ -248,9 +248,9 @@ Now lets understand what are the different data types we can assign to our varia
   - Numeric Types: `int`, `float`, `complex`
   - Sequence Types: `list`, `tuple`, `range`
   - Mapping Type: `dict`
-  - Set Types: `set`, `frozenset`
+  - Set Types: `set`, `frozenset` (not gonna note it since it is not used very ofter)
   - Boolean Type: `bool`
-  - Binary Types: `bytes`, `bytearray`, `memoryview`
+  - Binary Types: `bytes`, `bytearray`, `memoryview` (not gonna note it since it is not used very ofter)
   
 By the way in case you are unsure of a variables data type you can use this built in tool of python within your code:
 ```python
@@ -286,15 +286,131 @@ It would take too much time to write down every standart library method. Just [v
 
 ### Numeric Types
 
-### Sequence Types
-
-### Mapping Type
-
-### Set Types
+If you want your data types to be a numeric value you can use `int` and `float`. For exmaple weather you are building a calculator, or a weather application you will have to use numeric types in your variables:
+```python
+x = 1    # int
+y = 2.8  # float
+```
+Floating point is just a name for decimal integers. Numbers can be either negative or positive. You can convert types with these:
+```pytohn
+a = float(x)  # 1.0
+b = int(y)    # 2
+```
 
 ### Boolean Type
 
-### Binary Types
+In programming you often need to know if an expression is `True` or `False` as it is in it's logic, Boolean data types can be either `True` or `False` (no you do not put quotation marks like you do in strings that would just convert boolean type to a string. 
+```python
+foo = True
+bar = False
+```
+But you do not need to store these on a variable expressions already return these data types. For exmaple:
+```python
+print(10 > 9)  # prints True
+```
 
-### Casting
+You can also evaluate variables and expressions by the `bool()` function. Most of the variables return you True such as this:
+```python
+bool("Hey")   # True
+bool(1)       # True
+bool(5.692)   # True
+```
+Only some values return you false:
+```python
+bool(False)
+bool(None)
+bool(0)
+bool("")
+bool(())
+bool([])
+bool({})
+```
 
+### Sequence Types
+
+In sequence data types you can have a sequence of values inside a single variable. For example before getting into python or its seuqnece data types lets explore why do we need such a data type and explore it's logic. Let's say that we want to store 5 int typed variables ranging from 0 - 100. We can create it such as this:
+```
+num1 = 50
+num2 = 14
+num3 = 63
+num4 = 90
+num5 = 92
+```
+But think if we had a set of 100 numbers creating 100 variable declarations will be extremly hard and un-easy to read. Instead we can store them in a group like we do in math and give the group a name:
+```
+numbers = {50, 14, 63, 90, 92}
+```
+and we can access the groups values in math with their index numbers. Well it is exactly the same in programming. But lets see index accessing with math in our psuedo-code:
+```python
+numbers{0}  # 50
+numbers{2}  # 63
+```
+See? it is more neatly orginized and more readable (don't foget it will be waay more handier once you start writing big amount of code). Python gives you 2 sequence data types: `list` and `tuple`
+
+- `list` -- lets write the above group with lists in python code:
+  ```python
+  numbers = [50, 14, 63, 90, 92]
+  ```
+  You can acess the values of the list with the indexing:
+  ```python
+  numbers[0]  # 50
+  numbers[2]  # 63
+  numbers[-1] # 92 (negative numbers start from -1 and access the list from revers)
+  ```
+  You can change the data's value inside a list. for exmaple:
+  ```python
+  numbers[0] = 1
+  print(numers[0])  # 1 
+  ```
+  You can also add an item to the list with `.append()` function:
+  ```python
+  numbers.append(5039)
+  
+  print(numbers)  # [1, 14, 63, 90, 92, 5039]
+  ```
+  And you can also remove itesm with `.pop()` function:
+  ```python
+  numbers.pop()
+  
+  print(numbers)  # [1, 14, 63, 90, 92]
+  ```
+  
+- `tuple` -- a tuple is the same as list, it is a group of data in a single variable but the only difference is it is **unchangable** you cannot append or pop or change the vlaue of a data in a certain index. It is as it is from the day it is created. And also the the syntax uses parantheses instead of brackets:
+```python
+thistuple = ("apple", "banana", "cherry")
+```
+
+There are many built in methods to be used in tuples and lists however they are too long to note here. But for exmaple you can get the length of the lists, concatanate, copy, trim, slice ... etc. Please check the official documentation for more information regarding the built in methods.
+
+### Mapping Type
+
+As you are used to by now before we jump into writing maps in python lets first explore why do we need maps. For exmaple storing numbers inside a list is not meaningful. It is just a bunch of numbers connected to gether inside a group. Yes you could give it a meaning such as grades. And each number would hold the grade of a student. But then you would need to assign a student name to each of the grade otherwise how would we know which grade belong to which student. In that point traditional lists fail to deliver us what we need. We need a "map" to see which student has the grade. Thats why programming languages (most of them) implement map data types. So that you can store your data in a more meaningful way.
+
+In python maps are called dictionaries and they are written with curly brackets. Each data index has a `key` and a `value` accosiated with it (key:studnet, data:grade)
+```python
+student_grades = {
+  "john": 89,
+  "sally": 45,
+  "jamie": 84
+}
+```
+And you can access the wanted data by just giving the keys. For example from the above example, if we want to learn the grade of a student, we just need to give the student's name to the code:
+```python
+student_grades["john"]       # 89
+# or
+student_grades.get("sally")  # 45
+```
+Adding an item to the dictionary is done by using a new index key and assigning a value to it:
+```python
+student_grades["kayce"] = 25
+```
+And as you might have guessed you delete items by giving its key:
+```python
+student_grades.pop("kayce")
+```
+There are muchc more you can do with dictionaries or with it's built in methods however as I mentioned above it is pointless to note down every bit of detail about the language. The above information is ennough for you for the majority of the part. For more info [click here](https://www.w3schools.com/python/python_dictionaries.asp)
+
+
+<br>
+
+- [Part 2](./python-2.md)
