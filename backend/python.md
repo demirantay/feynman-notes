@@ -52,30 +52,57 @@ So now that we learned what computer programs are, now we can learn the differen
 
 ## Introduction to Python
 
-Left it at here I am goging to comeback to this
-- https://github.com/trekhleb/learn-python
-- https://www.w3schools.com/python/python_ref_keywords.asp
+We now that we have learned what are programming languages are or what are the differences between a compiled and a interpreted languages are let's now learn about what exactly is `python`. I do not need to repeat that python is a interpreted programming language you already know that. What I will tell you is that why is python designed in the way it is designed. So esentially to quote the man (Guido van Rossum) who created python itself *"Computer Programming for Everybody", in which he further defined his goals for Python: An easy and intuitive language just as powerful as major competitors. Open source, so anyone can contribute to its development.* That quote and design mentality has been the corner stone for every update python received. 
 
-### Getting Started
+The language is kept extremly simple so that anybody can read or write in it without having to read hours of material. You can basically learn the basics of it over a weekend. And as it is mentioned above python is "open source" which means it is completly free and accepts contributions of work from everybody around the globe. 
 
-### Operators
+## Getting Started
 
-### Data Types
+Before we dive into python's syntax rules and such ... we first need to install it into our computer. You can install it from [the official python.org](https://www.python.org/) or if you are familiar with the command line (terminal). You can install it with the following commands:
+```
+# for Ubuntu
+$ sudo apt-get update
+$ sudo apt-get install python3.6
 
-### Control Flow
+# for Mac
+brew install python
+```
 
-### Functions
+Now that we have installed it for testing purposes to see that the program is working correctly we are going to test it with a simple code. First go to your desktop or wherever you would like to create a new empty blank file. Name the file `test.py` (all python files created should have a .py extension.) and type the following inside the file and save it:
+```python
+print("Hello, World!")
+```
+Well for the final part let's learn how to run your python programs on your computer. Open up your command line (terminal) and once you change your directory to the `test.py` file's location (if you are not familiar with terminal, command line tools - read my shell feynman notes). And once you find that file you will need to use python's interpreter tool to run your `test.py` file. And to use it you just simply type python. Let's see an exmaple:
+```
+$ python test.py
+```
+The command above in the terminal outputs the following:
+```
+Hello, World!
+```
 
-### Classes
+## Comments
 
-### Input/Output
 
-### Modules
 
-### Errors and Exceptions
+## Data Types
 
-### Files
+## Operators
 
-### Additions
+## Control Flow
 
-### Little tour of Standart Libraries
+## Functions
+
+## Classes
+
+## Input/Output
+
+## Modules
+
+## Errors and Exceptions
+
+## Files
+
+## Additions
+
+## Little tour of Standart Libraries
