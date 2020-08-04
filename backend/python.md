@@ -83,11 +83,76 @@ Hello, World!
 
 ## Comments
 
+Before we get into how to write comments in python. Let's first understand what are comments and how are comments used inside a programming language. As it turns out writing code is not that hard but writing maintainable code that can be understood by many people ranging from different skillsets in the future is a very hard task. Believe it or not you usually won't even remember what code you wrote 2 days ago. That is why the founders of programming languages included a system called `comments`
 
+Basically comments are lines of text that is included in some parts of the code so that the humans will have a better time understanding what is going on. They are kind of a sticky notes for the person who is maintaining, or writing that piece of code. Comments do not get executed by the interpreter at the runtime, they are simply there for the maintiner not for the final output of the program. And each language has their own form of snytax when it comes to writing comments. Let's see how python does it:
+```python
+# this is a single line comment, usaully added if the comment should be small
+```
+as you can see above if you start by writing `#` the right side of that text converts itself to a comment. It is best used for small comments. If you would like to write comments that spans more than couple of lines your best way of writing them is this:
+```python
+'''
+This is a 
+multi line comment
+and this comment will
+not get executed
+by the interpreter :)
+'''
+```
 
-## Data Types
+## Variables
+
+Now that we know how to write comments and run our code inside a terminal it is time to start learning the actual snyntax rules and logic of programming languages to implement some powerful code. Let's start with `variables`. Before we show it how to write it in python, let's first explore the logic behind it. So basically variables are "bags that contain information" what that means is that you can store data inside a container which you can access later on in your code. Lets see a basic exmaple first:
+```
+# this is not python code it is psuedo-code
+
+variable foo = 1
+variable bar = 5
+
+foo + bar  # outputs 6
+```
+As you have seen above variables are just containers that hold a value. The value can be a number, text, decimal pointed number, ... etc. (we will see what kind of data types you can put inside variables in the following chapters). And you need to give a name to your variables so that you can access them later on, in the above example we have two variables named `foo` and `bar`. By the way the `=` operator does not mean "equals to". In programming "equals to" have a different operator (`==`) a single `=` operator means that the data in the right side of that operator will be connected (assigned) to the left side of that operator.
+
+Now that the logic is out of the way lets see how to write variables in python. Unlike other programminglanguages, python has no command for declaring a variable, you just give it a name and a variable is created the momoent you first assign a value to it:
+```python
+x = 10
+y = "john doe"
+print(x)
+print(y)
+```
+The code above outputs:
+```
+10
+john doe
+```
+Also you can change the variables value at any time you want:
+```
+x = 10
+x = 555
+print(x)  # prints 555
+```
+
+Now that we have seen the basics of now let's see some details that we can use for the curious readers. First variable names have rules:
+  - You cant start a variable name with a number `2bar = 1` it is illegal and you will get an error.
+  - You cant have a dash in between `foo-bar = 1` this is also illegal
+  - You cant spaces in a name `foo bar = 1` this is also illegal
+  
+And lastly you can declare more than one variable inside a single code line like this:
+```python
+x, y, z = 1, 2, 3
+
+print(x)  # 1
+print(y)  # 2
+print(z)  # 3
+```
+or you can simply give all of the variables the same value:
+```python
+x = y = z = 15
+```
 
 ## Operators
+
+## Data Types
 
 ## Control Flow
 
