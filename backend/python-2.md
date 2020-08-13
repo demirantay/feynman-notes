@@ -49,13 +49,72 @@ So now in the above code we have coded a new concept instead of just entering pa
 
 # Input/Output
 
+First lets understand what input and output does in a computer program. So basically in it's name an input gets an input from the user. It might be a keyboard char, a mouse click .. etc. anything really that is provided from the user. And the output is what our computer outputs (shows) to the user. They are bascially a primitive communication line between a human and a computer. (yes, you can also output values to other programs and chain them but for the sake of simplicity i just menitoned humans and computers)
+
+Lets see how they are used in python. Python uses `input()` function that comes with the standart library. For example if you want to get a user input and store it in it somewhere you use this:
+```python
+username = input("enter username:")
+```
+But input() always reutrns you a string. So how do you fix that problem and get other values ? Simple! you use conversion methods that we learned above:
+```
+teleophone = int(input("phone number: "))
+```
+as you can see in the aobve code we have converted the entered string number to a integer. 
+
+And now lets see how we output stuff to the user or computer. By now you ahve seen it used number of times so you know how it operates:
+```python
+username = "foo"
+
+print(username)
+```
+yes good old `print()` is used for printing and outputtung text to the users. Well, you may be wondering well what is there to learn about it and you would be suprised. But for now lets just see the basics of interestnig things we can do with print:
+```
+print("hello" + str(username) + " , nice to meet you!")
+```
+You can add variables inside a print statement so that the output dynamiacally changes based on the variables that are passed on to it. You can also format your print values with var.format() function. However these are beyond the scope of this file. Just know print() is your go to function for output. But if you want to dive deeper you can findout more output functions and methods.
+
 # Modules
 
 # Errors and Exceptions
 
+So far we have learned most of the logic we needed to learn in python and programming. Now we need to learn a tirck and it is: "handling errors". What I mean by that is weather you are a star-unicorn programmer or a simple noob, you will ALWAYS run into errors. No code out there is error-free. So in order to survive int his distopyian world we need to have the correct control mechanims in place so that the program knows exactly what to do once the error is encountered. The logic is mostly same as control flows `if` blocks. But instead it is just designed for errors rather than implementing logic to check weather if it is true or false.
+
+We have three new keywords to learn:
+  - `try` -- block lets you test a block of code for errors
+  - `except` -- block lets you handle the error
+  - `finally` -- block lets you execute code, regardless of the result of the try-and-except blocks.
+  
+Lets see a basic example for starters:
+```python
+try:
+  print(x)
+except:
+  print("Something went wrong")
+finally:
+  print("The 'try except' is finished")
+```
+The code above will execute the `except` block because the first code has an error in it (var x is not defined). So the thing you have to understand is that any single error made in the try block makes that block go to waste. So while using this error handling do not just put every bit of your code into these try ... except ... blocks. Only put code that you want to handle if it has errors in it. 
+
+Because even though you might have an error in your code, maybe it is not that important and does not stops the core of your application from running. But if everyting was inside a giant try and except blocks the core of your program would not run becasue of a single small error in the try block. Remember to place these code blocks carefully and smartly.
+
+There are many type of errors that you can raise with except. And we will learn them more in the future ...
+
 # Files
 
 # Additions
+
+This section doesn't really have a name it is called `additions` because I am going to add new things to the note file in here. 
+
+- `pass` -- the "pass" statement is a null statement. It doesn't really do anything. The only difrerence between a comment and a pass is that pass is interpreted by the interpreter while the comments are ignored. So most people use the pass statement as a placeholder value in functions, classes .. etc. so that poeple can comeback to it:
+```python
+function some_func_name():
+    pass  # havent implemented anythign gonna get back to it later on
+```
+or 
+```python
+for val in sequence:
+    pass
+```
 
 # Little tour of Standart Libraries
 
@@ -68,3 +127,18 @@ Now that we learned the library is just a collection of `functions` to be includ
 - Mathematics (`math`, `random`, `statistics` libraries)
 - Dates and Times (`datetime` library)
 - Data Compression (`zlib` library)
+
+Lets take a small look at each of these standart libraries. It is not logical to note all of their functionalities here because some of them are huge and they have their own documentation in place. 
+
+- `json` -- you can use this library to serilize the json objects into python dictionaries, lists, tuples .. etc. If you are wondering what the hell is a json object do not worry it is beyond the scope of this note file. You will learn them once we get to API's in the backend section of this feynman-techniuqed-notebook.
+
+- `glob` -- The glob module provides a function for making file lists from directory wildcard searches. Again if these words such as directory wildcard searching does not mean shit to you at the moment. Do not worry we will learn more about them in the operating system/shell subjects.
+
+- `re` -- The re module provides regular expression tools for advanced string processing. For complex matching and manipulation, regular expressions offer various functions to use. Well yes regular expression is a vague term too but it is mostly about string manipulation, matching ... etc. it is not a hard thing to understand. When you want to build advanced programs you will almost always or most of the time run into string problems. And this module should always be in your toolbelt once you run into those type of problems.
+
+- `math`, `random`, `statistics` -- well as it is in its name, these modules are extremly useful for various mathematical functions. They provide extremly well writen code for any math related concepts such as formulas, equations, high level mathematics such as calculus .. etc. People who code game engines, physics engines use these module extensively.
+
+- `datetime` -- Suprisingly date time is an extremly tricky concept. Even the smartest people in the world gets confused by it. Because to be honest in order to get the fucking time you have to know about solar system and when and where our earth is currenlty located on the solar system ... etc. If you are a normal person such as me you will not have a built-in-house space observatory sysstem. So use this module to manipulate dates and time in your code.
+
+- `zlib` -- Common data archiving and compression formats are directly supported by modules including: zlib,
+gzip, bz2, lzma, zipfile and tarfile. To be fair this isn't a vagaue concept to be understood yes most of the commands will be unfamiliar but zlib basically lets you compress and archive your data such as winrar if you remember it.
