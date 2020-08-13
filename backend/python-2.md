@@ -43,9 +43,68 @@ So now in the above code we have coded a new concept instead of just entering pa
 
 # Loops
 
+First lets talk about what loops are and how are they used in the code's logic. In computer science, a loop is a programming structure that repeats a sequence of instructions until a specific condition is met. Sounds a bit scary right? No its actually easy once you learn its logic so bascially think about those if blocks we defined above. `If` blocks code executres once a condition is met. In loops the code bloock executes repedeatly without stopping until a condition is met. This means that unless the condition is met the loop will run the code indefinetly. 
+
+In python we have two ways of wrriting loops:
+  - `while` statement.
+  - `if` statement.
+
+- Let's see an example of the `while` loops:
+  ```python
+  i = 1
+  while i < 6:
+      print(i)
+      i += 1
+  ```
+  So in the above code the program will output numbers starting from 1, 2, ... to 5. Because everytime the loop executes the code at the end our variable `i` gets incremented by 1. And the condition of the loop is that the `i` should be less than 6. So as we have described above if the condition was wrong or by design did not have control mechanism it would go idfeinietly. Lets see indefenite loops:
+  ```python
+  i = 1
+  while i > 0:
+    print(i)
+    i += 1
+  ```
+  This will create an indefinite loop because the condition and its control mechanism at the bottom do not stop the loop. Instead it feeds it. By the way if you want to create a indefinite loop by deisng you can simply use True boolea value:
+  ```python
+  while True:
+      # execute
+  ```
+  
+- Before we get into `for` loops we should talk about `control` statements of a loop. They can be used in for loop but they mostly go hand in hand with `while` loops. You use control statements to control the state of the loop. If the loop reach a certain value you can either skip that values repeat cycle or just simply break the loop. The two control statements for these operations are : `break`, `continue`. 
+  ```python
+  while True:
+      foo = input(...)
+      
+      if foo == "stop":
+          break
+       if foo == "gibersih value":
+          continue
+  ```
+  This loop above will continue to ask for user input unless the value is "stop". If it is stop than the break control statement will be executed and the loop will be terminated. 
+  
+- `for` loops -- are mostly used when you want to traverse a data sequence such as lists, tuples, distionaries ... etc.
+  ```python
+  fruits = ["apple", "banana", "cherry"]
+  for x in fruits:
+    print(x)
+  ```
+  
+- If you are familiar with another language than you have used this type of for loop before:
+  ```
+  for (i=0; i<10; i++) { ... }
+  ```
+  If you haven't used this type of for loops before let me explain. So bascially like in whiel you define your i in the begining, and in the second control part checks if the condition is met. If the i is less then 10 then the code will execute. And the last part is like in the while loop it iterates the initial value so that the code will not go infitie. If you are wondering well this is exactly like while loop but in a different writing style then you would be exactly right. But in python you write this like this (dont worry nearly everyone fucking forgets this for loop syntax in python for some reason it is not that easy to remember)
+  ```python
+  for i in range(0, 10, 1):
+      # loop code
+  ```
+
 # Functions
 
+...
+
 # Classes
+
+...
 
 # Input/Output
 
@@ -137,6 +196,8 @@ Because even though you might have an error in your code, maybe it is not that i
 There are many type of errors that you can raise with except. And we will learn them more in the future ...
 
 # Files
+
+...
 
 # Additions
 
