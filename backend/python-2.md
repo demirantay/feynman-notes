@@ -75,6 +75,43 @@ You can add variables inside a print statement so that the output dynamiacally c
 
 # Modules
 
+When you write programs that has more than 1000 lines of code it is a good idea to start moduling up your code base. What does using modules mean ? Well it is not concept solely meant for programmers. Modules are used in nearly every profession out there. It is basically used when the task is too giagantic you just break it up into smaller segments. and each segments get connected to make a larger piece. And each small segment is called modules. That is the same in programming. You cannot just jam all of your code into a single file . (Yes theoritallcy you can do it, but remember readability and maintainiabiltiy is waaaay more important than anything else) 
+
+So it is a very good idea to break your code into logical modules and design them in a smart way that you will have no problems while plugging and connecting them with each other.
+
+So how do we define and use modules in python ? By the way before we learn how to write modules snytaticaly in python. Lets take another look on how to structure them. Yes, there are exceptions but for the most of the time you should have an entry point to your program called `main.py` and this will be used to access to the rest of the modules. And each module should contain functions and classes. If you make your modules as libraries you simply just have to control the flow of your program inside that `main.py` file.
+
+Lets see, lets create a new file in our directory called `myModule.py`:
+```python
+def greeting(name):
+    print("hello" + name)
+```
+now we need to connect this module to our `main.py` file. And we can do this with the `import` statement. As it is in its name you simply import the code on a module:
+```python
+import myModule
+
+myModule.greeintg("john")   # prints "hello, john"
+```
+You can rename your modules with `as` statement:
+```python
+import myModule as m
+
+m.greeting(...)
+```
+By the way you will learn more about the startadt libraries down below but I wanted you to know that you import them this way too such as lets import the `random` standart library in our code:
+```python
+import random
+
+# ... you can use random modules code here
+```
+And for heads up importing all of the code inside a module is a terrible idea. Usually lines of code ina mid sized application is between 10k to 100k lines of code. It is just inefficent to import all of them in your `main.py` you can just import the parts that you need and disregard the rest with `from` statement:
+```python
+from myModule import greeting
+
+myModule.greeting("john")
+```
+If there were any other functions in `myModule` it coouldn't be used because in the above code they are not imported so basically they don't exist for `main.py`. There are much more you need to learn about import and modulairty in python. For example you need to learn about absolute and relative paths to learn how to access modules in different palces of your directory. You need to learn how to avoid circular imports .. etc. but all of the advanced stuff will be covered later on on my advanced python feynman note file. This just teaches you the basics and the logic behind it.
+
 # Errors and Exceptions
 
 So far we have learned most of the logic we needed to learn in python and programming. Now we need to learn a tirck and it is: "handling errors". What I mean by that is weather you are a star-unicorn programmer or a simple noob, you will ALWAYS run into errors. No code out there is error-free. So in order to survive int his distopyian world we need to have the correct control mechanims in place so that the program knows exactly what to do once the error is encountered. The logic is mostly same as control flows `if` blocks. But instead it is just designed for errors rather than implementing logic to check weather if it is true or false.
