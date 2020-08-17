@@ -100,6 +100,28 @@ In python we have two ways of wrriting loops:
 
 # Functions
 
+Again lets stat off by defining what functions are, and how they are used in the context of programming and than later on we will move on to learning how to write them in python. So, when you will write a fairly medium sized program or even a small one, you will never want to repeat yourself while writing a code. What do i mean is that for example see the below code in psuedo-code:
+```
+var a = 10
+var b = 20
+
+var sum1 = a + b
+
+var c = 13
+var d = 65
+
+var sum2 = c + d
+```
+as you can the above code it is fairly simple. You are just trying to output the sum of 4 different variables grouped into two. However if we wrote a function, we could use the same formula such as `foo + foo` and would not have to define variables to be used in our sum variables. A picture is a thousand words, so let's see the following:
+```
+function sum(a + b) { 
+    return a+b
+}
+
+summary_1 = sum(10, 20)
+summary_2 = sum(13, 65)
+```
+
 ...
 
 # Classes
