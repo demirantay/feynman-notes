@@ -1,3 +1,5 @@
+> # THIS NOTE FILE IS NOT FINISHED, I STOPPED WRITING IT FOR NOW.
+
 # Python
 
 In these so called "feynman techniqued note files" I will try to explain subjects, concepts, and much more in a very simple language that a 6 year old will be able to understand what is going on. Simple as in both it will be very elementary in english since it is not my native langage and simple because that is how the feynman technique works. Plus, since most of the programming concepts are extremly abstract I will try to give example analgoies from the real world, so that the reader will have easy time grasping the idea.
