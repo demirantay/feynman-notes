@@ -1,4 +1,2 @@
-links to read before starting: 
+### Standarts and Best Practices
 
-- https://gist.github.com/sloria/7001839
-- https://data-flair.training/blogs/python-best-practices/
